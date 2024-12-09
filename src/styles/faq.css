@@ -1,0 +1,9 @@
+.accordion-content {
+    transition: all 0.3s ease-in-out;
+  }
+  .accordion-content:hover {
+    transform: scale(1.02);
+  }
+  .description {
+    transition: max-height 0.3s ease;
+  }

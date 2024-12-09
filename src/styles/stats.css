@@ -1,0 +1,62 @@
+/* START STAT SECTION */
+.stats-section h3{
+    font-size: var(--fs-2);
+    font-weight: 900;
+
+  }
+  .stats-section p{
+    font-size: var(--fs-4);
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  @media (min-width: 769px) {
+    .stats-section {
+        display: flex;
+        justify-content: space-between;
+        margin: 0%;
+    }
+  
+    .stat {
+      flex-grow: 1;
+      text-align: center;
+      color: #fff;
+      margin: 25px 0; /* Ajoute une marge de 20px en haut et en bas, sans marge sur les côtés */
+      padding: 0; 
+      border-radius: 0;
+  }
+  
+  
+  
+    .stat h3, .stat p {
+        margin: 5px; 
+    }
+  
+    .stat:nth-child(odd) {
+        background-color: #ff69b4;
+    }
+  
+    .stat:nth-child(even) {
+        background-color: #fbb0c8;
+    }
+  }
+  
+  /* Styles pour les appareils mobiles */
+  @media (max-width: 768px) {
+    .stat {
+        margin: 0;
+        color: #fff;
+    }
+  
+    .stat:nth-child(odd) {
+        background-color: #ff69b4;
+    }
+  
+    .stat:nth-child(even) {
+        background-color: #ffb6c1;
+    }
+  
+    h3, p {
+        margin: 0; 
+        text-align: center;
+    }
+  }

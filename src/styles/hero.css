@@ -1,0 +1,110 @@
+/*-----------------------------------*\
+  #HERO
+\*-----------------------------------*/
+
+
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    gap: 20px;
+    margin: auto;
+    margin-top:5rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-title { 
+    color: var(--white); 
+}
+
+.hero-text {
+    font-size: var(--fs-5);
+    color: var(--white);
+    margin-block: 24px 36px;
+}
+
+.btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero-image .img-holder {
+    position: relative;
+    overflow: hidden;
+    /* Retirer toute couleur de fond pour garantir la transparence */
+    background: transparent;
+}
+
+.hero-image .img-cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Assure que l'image est contenue sans déformation */
+    border-radius: var(--radius-20); /* Assure que l'image est arrondie si nécessaire */
+}
+
+
+
+/* curseur machiine a ecrire*/
+.typing {
+    display: inline-block;
+  }
+  
+  .cursor {
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 0.7s step-end infinite;
+    width: 1.5px; /* Ajuste cette valeur pour changer la largeur du curseur */
+    height: 1em; /* Assure la hauteur du curseur */
+    background-color: pink; /* Assure que la couleur du curseur est bien visible */
+    /* Ajoute cette ligne pour enlever tout style par défaut */
+    border-left: none; 
+    color: transparent; /* Rend le texte transparent */
+    transform: translateY(20%);
+  }
+  
+  .cursor.hidden {
+    display: none;
+  }
+  
+  @keyframes blink {
+    from, to {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero .container {
+      grid-template-columns: 1fr; /* Une colonne */
+      text-align: center;
+    }
+  
+    .hero-content {
+      order: 1; /* Texte en premier */
+    }
+  
+    .hero-image {
+      order: 2; /* Image en second */
+    }
+  }
+  
